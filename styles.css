@@ -1,17 +1,46 @@
 body {
-    background-color: #0e0c22;
+    background-color: #343E58;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+input {
+    padding: 10px;
+    height: 15px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 0;
+}
+
+button {
+    height: 35px;
+    background-color: #a13030;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+button:hover{
+    background-color: #6d1f1f;
+    cursor: pointer;
+}
+
+
 #userinfo {
-    background-color: #686868;
-    border-radius: 5px;
-    width: 500px;
-    height: 350px;
+    background-color: #353432;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 30px;
 }
 
 #userinfo img {
@@ -21,7 +50,7 @@ body {
 }
 
 #userinfo h2 {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -34,6 +63,41 @@ body {
 }
 
 #maininfo {
-    background-color: #943232;
+    background-color: #008FC4;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+}
+
+#allinfo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+#numbersinfoarea{
+    width: 100%;
+    background-color: #575757;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #fff;
+}
+
+#numbersinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
