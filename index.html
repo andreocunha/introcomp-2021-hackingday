@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Github User Info</title>
 </head>
 <body>
@@ -11,35 +13,7 @@
 
     <input type="text" id="username" placeholder="Usuário do Github"></input>
     <button id="btn-search" onclick="getUser()">Buscar</button>
-    
-    <div id="userinfo"></div>
 
-    <script>
-
-        function getUser() {
-            let user = document.getElementById('username').value;
-            fetch('https://api.github.com/users/' + user)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                console.log(data);
-                let userinfo = document.getElementById('userinfo');
-                userinfo.innerHTML = `
-                    <img src="${data.avatar_url}" alt="${data.login}">
-                    <h2>${data.login}</h2>
-                    <p>${data.bio}</p>
-                    <p>${data.location}</p>
-                    <p>${data.blog}</p>
-                    <p>${data.public_repos}</p>
-                    <p>${data.followers}</p>
-                    <p>${data.following}</p>
-                `;
-            })
-            .catch(function (error) {
-                console.log("Error: " + error);
-            });
-        }
-    </script>
+    <div id="card"></div>
 </body>
 </html>
